@@ -10,6 +10,7 @@
 	<script>
 	var canvas;
 	var canvasContext;
+	var ballX = 50;
 	
 	window.onload = function() {
 		canvas = document.getElementById('gameCanvas');
@@ -26,7 +27,7 @@
 		canvasContext.fillStyle = 'white';
 		canvasContext.fillRect(225,210,200,200);
 		canvasContext.fillStyle = 'red';
-		canvasContext.fillRect(canvas.width/2,200,50,25);
+		canvasContext.fillRect(ballX,200,50,25);
 	}
 		
 	</script>
