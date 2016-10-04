@@ -20,9 +20,11 @@
 		setInterval(drawEverything, 1000/framesPerSecond); // Increase update rate for smoother movement - important, see in browser 
 	}
 	
+	function moveEverything() {
+		ballX = ballX + 5;  // make the ball move by 5 px
+	}
+	
 	function drawEverything() {
-		ballX = ballX + 5; // make the ball move by 5 px
-		
 		canvasContext.fillStyle = 'black';
 		canvasContext.fillRect(0,0,canvas.width,canvas.height);
 		canvasContext.fillStyle = 'white';
