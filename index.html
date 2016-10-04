@@ -16,16 +16,13 @@
 		canvas = document.getElementById('gameCanvas');
 		canvasContext = canvas.getContext('2d');
 		
-		setInterval(drawEverything, 50); // Increase update rate for smoother movement - important, see in browser 
-		drawEverything();
-		drawEverything();
-		drawEverything();
+		var framesPerSecond = 30;
+		setInterval(drawEverything, 1000/framesPerSecond); // Increase update rate for smoother movement - important, see in browser 
 	}
 	
 	function drawEverything() {
 		ballX = ballX + 5; // make the ball move by 5 px
 		
-		console.log(ballX);
 		canvasContext.fillStyle = 'black';
 		canvasContext.fillRect(0,0,canvas.width,canvas.height);
 		canvasContext.fillStyle = 'white';
