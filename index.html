@@ -17,7 +17,7 @@
 		canvasContext = canvas.getContext('2d');
 		
 		var framesPerSecond = 30;
-		setInterval(function() {
+		setInterval(function() { // pass an anon fn to setInterval, as it's first param
 			moveEverything();
 			drawEverything();
 		}, 1000/framesPerSecond); // Increase update rate for smoother movement - important, see in browser 
