@@ -17,7 +17,12 @@
 		canvasContext = canvas.getContext('2d');
 		
 		var framesPerSecond = 30;
-		setInterval(drawEverything, 1000/framesPerSecond); // Increase update rate for smoother movement - important, see in browser 
+		setInterval(callBoth, 1000/framesPerSecond); // Increase update rate for smoother movement - important, see in browser 
+	}
+	
+	function callBoth() {
+		moveEverything();
+		drawEverything();
 	}
 	
 	function moveEverything() {
