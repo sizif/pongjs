@@ -29,7 +29,7 @@
 	function moveEverything() {
 		ballX = ballX + ballSpeedX;  // make the ball move by 5 px
 		if(ballX > 800) {
-			ballSpeedX = -5;
+			ballSpeedX = -ballSpeedX;
 		}
 	}
 	
