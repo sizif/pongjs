@@ -38,6 +38,12 @@
 		if(ballX > canvas.width) {
 			ballSpeedX = -ballSpeedX;
 		}
+		if(ballY < 0) {
+			ballSpeedY = -ballSpeedY;
+		}
+		if(ballY > canvas.height) {
+			ballSpeedY = -ballSpeedY;
+		}
 	}
 	
 	function drawEverything() {
