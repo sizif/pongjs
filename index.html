@@ -66,9 +66,9 @@
 	function ballReset() {
 		if(player1Score >= WINNING_SCORE || 
 			player2Score >= WINNING_SCORE) {
+				showingWinScreen = true;
 				player1Score = 0;
 				player2Score = 0;
-				showingWinScreen = true;
 			}
 		
 		ballSpeedX = -ballSpeedX;
