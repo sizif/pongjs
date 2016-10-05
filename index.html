@@ -18,6 +18,39 @@
 	var paddle1Y = 250;
 	const PADDLE_HEIGHT = 100;
 	
+	/*
+	We're gonna get an event that fires 
+	every time the mouse moves.
+	
+	So the program's gonna call the function 
+	every time the mouse moves.
+	
+	And that event is gonna hand it the mouse coordinates 
+	that it received, as part of this evt, or 'event' data.
+	
+	We're then getting the canvas's bounding rectangle, (ln1)
+	We're also getting a handle on the document (ln2)
+	We're calculating where on the page from the left side (ln3), or
+	from the top side (ln4), the canvas element is, and how far have
+	we scrolled the browser (root.scrollLeft, root.ScrollTop).
+	When we subtract those out, we get the X and Y coordinates
+	of the mouse within the playable space.
+	
+	Lastly, it's returning 2 bits of information at once (ln5-8).
+	Technically, this is just one return value, it's just a
+	JavaScript "object literal".
+	*/
+	function calculateMousePos(evt) {
+		var rect = canvas.getBoundingClientRect();
+		var root = document.documentElement;
+		var mouseX = evt.clientX - rect.left - root.scrollleft;
+		var mouseY = evt.clientY - rect.top - root.scrollTop;
+		return {
+			x:mouseX,
+			y:mouseY
+		};
+	}
+	
 	window.onload = function() {
 		canvas = document.getElementById('gameCanvas');
 		canvasContext = canvas.getContext('2d');
