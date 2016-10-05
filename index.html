@@ -60,6 +60,12 @@
 			moveEverything();
 			drawEverything();
 		}, 1000/framesPerSecond); // Increase update rate for smoother movement - important, see in browser 
+		
+		canvas.addEventListener('mousemove', 
+			function(evt) {
+				var mousePos = calculateMousePos(evt);
+				paddle1Y = mousePos.y;
+			});
 	}
 	
 
