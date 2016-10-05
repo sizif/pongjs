@@ -137,8 +137,15 @@
 		colorRect(0,0,canvas.width,canvas.height,'black');
 		
 		if(showingWinScreen) {
+			canvasContext.fillStyle = 'white';
+			
+			if(player1Score >= WINNING_SCORE){
+				conavasContext.fillText("Left Player Won!", 350,200);
+			} else if(player2Score >= WINNING_SCORE) {
+				canvasContext.fillText("Right Player Won!", 350,200);
+			}
 			canvasContext.fillStyle = "white";
-			canvasContext.fillText("CLICK TO CONTINUE", 100,100);
+			canvasContext.fillText("CLICK TO CONTINUE", 350,500);
 			return;
 		}
 		
