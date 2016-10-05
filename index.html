@@ -38,6 +38,12 @@
 		};
 	}
 	
+	function handleMouseClick(evt) {
+		if(showingWinScreen) {
+			showingWinScreen = false;
+		}
+	}
+	
 	window.onload = function() {
 		canvas = document.getElementById('gameCanvas');
 		canvasContext = canvas.getContext('2d');
@@ -47,6 +53,8 @@
 			moveEverything();
 			drawEverything();
 		}, 1000/framesPerSecond); // Increase update rate for smoother movement - important, see in browser 
+		
+		canvas.addEventListener('mousedown', handleMouseClick);
 		
 		canvas.addEventListener('mousemove', 
 			function(evt) {
