@@ -83,7 +83,8 @@
 			   ballY < paddle1Y+PADDLE_HEIGHT) {
 			   		ballSpeedX = -ballSpeedX;
 			   } else {
-					ballReset();   	
+					ballReset();
+					player2Score += 1;
 			   }
 		}
 		if(ballX > canvas.width) {
