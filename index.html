@@ -57,9 +57,9 @@
 	
 	function computerMovement() {
 		if(paddle2Y < ballY) {
-				paddle2Y = paddle2Y + 6;
+				paddle2Y += 6;
 		} else {
-			paddle2Y = paddle2Y - 6;
+			paddle2Y -= 6;
 		}
 	}
 	
@@ -67,8 +67,8 @@
 		
 		computerMovement();
 		
-		ballX = ballX + ballSpeedX;
-		ballY = ballY + ballSpeedY;
+		ballX += ballSpeedX;
+		ballY += ballSpeedY;
 		
 		if(ballX < 0) {
 			if(ballY > paddle1Y && 
